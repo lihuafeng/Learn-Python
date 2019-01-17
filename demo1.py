@@ -48,3 +48,10 @@ def fab2(max):
 for i in fab2(5):
     print i
 
+from inspect import isgeneratorfunction
+print isgeneratorfunction(fab2) #True  判断一个函数是否是一个特殊的 generator 函数
+
+# fab2 是一个 generator function，而 fab2(5) 是调用 fab2 返回的一个 generator，好比类的定义和类的实例的区别
+import types
+print isinstance(fab2,types.GeneratorType)
+print isinstance(fab2(5),types.GeneratorType)
