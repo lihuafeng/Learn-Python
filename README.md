@@ -87,8 +87,8 @@ def showMaxFactor(num):
 创建迭代器
 ---
 格式：
-    * iter(obj)
-    * iter(func,  sentinel)
+* iter(obj)
+* iter(func,  sentinel)
 1、如果传递一个参数给 iter() ,它会检查你传递的是不是一个序列,如果是,那么很简单：根据索引从 0 一直迭代到序列结束。另一个创建迭代器的方法是使用类：一个实现了__iter__() 和 next() 方法的类可以作为迭代器使用。 
 2、如果是传递两个参数给iter() ,它会重复地调用 func ,直到迭代器的下个值等于sentinel。
 ```python
