@@ -66,3 +66,20 @@ print x,y  #2 1
 ---
     斐波那契（Fibonacci）數列是一个非常简单的递归数列，除第一个和第二个数外，任意一个数都可由前两个数相加得到。用计算机程序输出斐波那契數列的前 N 个数是一个非常简单的问题
 https://github.com/lihuafeng/python/blob/master/demo1.py
+
+循环与else
+---
+Python中，可以在 while 和 for 循环中使用 else 语句。在循环中使用时， else子句只在循环完成后执行， 也就是说 break 语句也会跳过 else 块。
+以寻找最大约数为例, 代码如下：
+```python
+def showMaxFactor(num):
+    count = num / 2
+    while count > 1:
+        if num % count == 0:
+            print 'largest factor of %d is %d' % (num,count)
+            break
+        count -= 1
+    else:
+        print num,"is prime"
+```
+同样地，for 循环也可以有 else 用于循环后处理。 它和while 循环中的else 处理方式相同。 只要for 循环是正常结束的(不是通过 break )， else 子句就会执行。
