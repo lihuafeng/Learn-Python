@@ -83,3 +83,20 @@ def showMaxFactor(num):
         print num,"is prime"
 ```
 同样地，for 循环也可以有 else 用于循环后处理。 它和while 循环中的else 处理方式相同。 只要for 循环是正常结束的(不是通过 break )， else 子句就会执行。
+
+创建迭代器
+---
+格式：
+    iter(obj)
+    iter(func,  sentinel)
+如果传递一个参数给 iter() ,它会检查你传递的是不是一个序列,如果是,那么很简单：根据索引从 0 一直迭代到序列结束。另一个创建迭代器的方法是使用类：一个实现了__iter__() 和 next() 方法的类可以作为迭代器使用。 
+如果是传递两个参数给iter() ,它会重复地调用 func ,直到迭代器的下个值等于sentinel。
+```python
+def fun():
+    return 2
+if __name__ == "__main__":
+    item= iter(fun,2)
+    for i in item:
+        print i
+ #当fun return 2，没有输出。当fun return 1,输出1，死循环
+```
