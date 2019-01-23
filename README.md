@@ -101,3 +101,4 @@ if __name__ == "__main__":
         print i
  #当fun return 2，没有输出。当fun return 1,输出1，死循环
 ```
+reversed() 内建函数将返回一个反序访问的迭代器。enumerate() 内建函数同样也返回迭代器。另外两个新的内建函数any() 和 all()，在 Python 2.5 中新增，如果迭代器中某个/所有条目的值都为布尔真时，则它们返回值为真。
